@@ -1,0 +1,614 @@
+{
+  "summary": "Self diagnostic app",
+  "components": [
+    {
+      "id": "mobile-application",
+      "name": "Mobile Application",
+      "description": "The native mobile application interface for users to access the diagnostic tool.",
+      "iconKey": "layout-dashboard",
+      "importance": "core"
+    },
+    {
+      "id": "backend-api-gateway",
+      "name": "Backend API Gateway",
+      "description": "Entry point for all external requests, routing them to appropriate serverless functions.",
+      "iconKey": "server",
+      "importance": "core"
+    },
+    {
+      "id": "authentication-service",
+      "name": "Authentication Service",
+      "description": "Manages user authentication, authorization, and user profiles.",
+      "iconKey": "lock",
+      "importance": "core"
+    },
+    {
+      "id": "diagnostic-engine-service",
+      "name": "Diagnostic Engine Service",
+      "description": "Processes diagnostic queries, applies logic, and generates results based on user input and content.",
+      "iconKey": "test-tube",
+      "importance": "core"
+    },
+    {
+      "id": "user-database",
+      "name": "User Database",
+      "description": "Stores user accounts, preferences, diagnostic history, and purchase records.",
+      "iconKey": "database",
+      "importance": "core"
+    },
+    {
+      "id": "content-database",
+      "name": "Content Database",
+      "description": "Houses all diagnostic content, questions, algorithms, and related media assets.",
+      "iconKey": "database",
+      "importance": "core"
+    },
+    {
+      "id": "content-management-system",
+      "name": "Content Management System",
+      "description": "Allows content creators to manage and publish diagnostic content and assets.",
+      "iconKey": "layout-dashboard",
+      "importance": "recommended"
+    },
+    {
+      "id": "web-application",
+      "name": "Web Application",
+      "description": "The web-based interface for users to access the diagnostic application.",
+      "iconKey": "globe",
+      "importance": "recommended"
+    },
+    {
+      "id": "analytics-service",
+      "name": "Analytics Service",
+      "description": "Collects and processes user behavior and application performance data for insights.",
+      "iconKey": "bar-chart",
+      "importance": "recommended"
+    },
+    {
+      "id": "notification-service",
+      "name": "Notification Service",
+      "description": "Handles sending various notifications to users via email, SMS, or push notifications.",
+      "iconKey": "bell",
+      "importance": "recommended"
+    },
+    {
+      "id": "payment-processing-service",
+      "name": "Payment Processing Service",
+      "description": "Manages secure processing of user payments and subscriptions.",
+      "iconKey": "credit-card",
+      "importance": "core"
+    },
+    {
+      "id": "file-storage-service",
+      "name": "File Storage Service",
+      "description": "Stores user-submitted files and static assets used by the application.",
+      "iconKey": "upload",
+      "importance": "recommended"
+    },
+    {
+      "id": "static-asset-storage",
+      "name": "Static Asset Storage",
+      "description": "Stores static files like frontend build artifacts, images, and other publicly accessible assets.",
+      "iconKey": "upload",
+      "importance": "recommended"
+    },
+    {
+      "id": "content-delivery-network",
+      "name": "Content Delivery Network",
+      "description": "Distributes static assets and caches API responses closer to users for improved performance and reliability.",
+      "iconKey": "globe",
+      "importance": "recommended"
+    }
+  ],
+  "canvasState": {
+    "nodes": [
+      {
+        "id": "mobile-application",
+        "name": "Mobile Application",
+        "description": "The native mobile application interface for users to access the diagnostic tool.",
+        "category": "frontend",
+        "importance": "core",
+        "iconKey": "layout-dashboard",
+        "tech": "React Native"
+      },
+      {
+        "id": "backend-api-gateway",
+        "name": "Backend API Gateway",
+        "description": "Entry point for all external requests, routing them to appropriate serverless functions.",
+        "category": "backend",
+        "importance": "core",
+        "iconKey": "server",
+        "tech": "AWS API Gateway"
+      },
+      {
+        "id": "authentication-service",
+        "name": "Authentication Service",
+        "description": "Manages user authentication, authorization, and user profiles.",
+        "category": "service",
+        "importance": "core",
+        "iconKey": "lock",
+        "tech": "Serverless Functions"
+      },
+      {
+        "id": "diagnostic-engine-service",
+        "name": "Diagnostic Engine Service",
+        "description": "Processes diagnostic queries, applies logic, and generates results based on user input and content.",
+        "category": "service",
+        "importance": "core",
+        "iconKey": "test-tube",
+        "tech": "Serverless Functions"
+      },
+      {
+        "id": "user-database",
+        "name": "User Database",
+        "description": "Stores user profiles, authentication details, purchase history, and diagnostic records in a relational database.",
+        "category": "database",
+        "importance": "core",
+        "iconKey": "database",
+        "tech": "AWS RDS (PostgreSQL)"
+      },
+      {
+        "id": "content-database",
+        "name": "Content Database",
+        "description": "Stores structured diagnostic content, questions, answers, and medical information in a relational database.",
+        "category": "database",
+        "importance": "core",
+        "iconKey": "database",
+        "tech": "AWS RDS (PostgreSQL)"
+      },
+      {
+        "id": "content-management-system",
+        "name": "Content Management System",
+        "description": "Allows content creators to manage and publish diagnostic content and assets.",
+        "category": "service",
+        "importance": "recommended",
+        "iconKey": "layout-dashboard",
+        "tech": "Contentful"
+      },
+      {
+        "id": "web-application",
+        "name": "Web Application",
+        "description": "The web-based interface for users to access the diagnostic application.",
+        "category": "frontend",
+        "importance": "recommended",
+        "iconKey": "globe",
+        "tech": "Next.js with TypeScript"
+      },
+      {
+        "id": "analytics-service",
+        "name": "Analytics Service",
+        "description": "Collects and processes user behavior and application performance data for insights.",
+        "category": "service",
+        "importance": "recommended",
+        "iconKey": "bar-chart",
+        "tech": "Segment"
+      },
+      {
+        "id": "notification-service",
+        "name": "Notification Service",
+        "description": "Handles sending various notifications to users via email, SMS, or push notifications.",
+        "category": "service",
+        "importance": "recommended",
+        "iconKey": "bell",
+        "tech": "Serverless Functions"
+      },
+      {
+        "id": "payment-processing-service",
+        "name": "Payment Processing Service",
+        "description": "Manages secure processing of user payments and subscriptions.",
+        "category": "service",
+        "importance": "core",
+        "iconKey": "credit-card",
+        "tech": "Serverless Functions"
+      },
+      {
+        "id": "file-storage-service",
+        "name": "File Storage Service",
+        "description": "Stores user-submitted files and static assets used by the application.",
+        "category": "infrastructure",
+        "importance": "recommended",
+        "iconKey": "upload",
+        "tech": "AWS S3"
+      },
+      {
+        "id": "static-asset-storage",
+        "name": "Static Asset Storage",
+        "description": "Stores static assets like images, CSS, and JavaScript files for efficient delivery to clients.",
+        "category": "infrastructure",
+        "importance": "recommended",
+        "iconKey": "upload",
+        "tech": "AWS S3"
+      },
+      {
+        "id": "content-delivery-network",
+        "name": "Content Delivery Network",
+        "description": "Globally distributes and caches static and dynamic content, improving performance and reliability.",
+        "category": "infrastructure",
+        "importance": "recommended",
+        "iconKey": "cloud",
+        "tech": "AWS CloudFront"
+      }
+    ],
+    "edges": [
+      {
+        "id": "e-api-gateway-to-auth",
+        "source": "backend-api-gateway",
+        "target": "authentication-service",
+        "label": "Authenticates requests",
+        "type": "dependency"
+      },
+      {
+        "id": "e-api-gateway-to-diagnostic-engine",
+        "source": "backend-api-gateway",
+        "target": "diagnostic-engine-service",
+        "label": "Initiates diagnosis",
+        "type": "communication"
+      },
+      {
+        "id": "e-auth-to-user-db",
+        "source": "authentication-service",
+        "target": "user-database",
+        "label": "Stores/Retrieves user data",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-diagnostic-engine-to-user-db",
+        "source": "diagnostic-engine-service",
+        "target": "user-database",
+        "label": "Stores diagnostic history",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-diagnostic-engine-to-content-db",
+        "source": "diagnostic-engine-service",
+        "target": "content-database",
+        "label": "Fetches diagnostic content",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-cms-to-content-db",
+        "source": "content-management-system",
+        "target": "content-database",
+        "label": "Manages content",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-mobile-app-to-analytics",
+        "source": "mobile-application",
+        "target": "analytics-service",
+        "label": "Sends telemetry",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-web-app-to-analytics",
+        "source": "web-application",
+        "target": "analytics-service",
+        "label": "Sends telemetry",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-api-gateway-to-analytics",
+        "source": "backend-api-gateway",
+        "target": "analytics-service",
+        "label": "Logs API usage",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-api-gateway-to-notification",
+        "source": "backend-api-gateway",
+        "target": "notification-service",
+        "label": "Triggers notifications",
+        "type": "communication"
+      },
+      {
+        "id": "e-diagnostic-engine-to-notification",
+        "source": "diagnostic-engine-service",
+        "target": "notification-service",
+        "label": "Sends diagnosis updates",
+        "type": "communication"
+      },
+      {
+        "id": "e-api-gateway-to-payment-processing",
+        "source": "backend-api-gateway",
+        "target": "payment-processing-service",
+        "label": "Initiates payments",
+        "type": "communication"
+      },
+      {
+        "id": "e-payment-processing-to-user-db",
+        "source": "payment-processing-service",
+        "target": "user-database",
+        "label": "Stores purchase data",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-payment-processing-to-notification",
+        "source": "payment-processing-service",
+        "target": "notification-service",
+        "label": "Sends purchase alerts",
+        "type": "communication"
+      },
+      {
+        "id": "e-diagnostic-engine-to-file-storage",
+        "source": "diagnostic-engine-service",
+        "target": "file-storage-service",
+        "label": "Stores/Retrieves files",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-cms-to-file-storage",
+        "source": "content-management-system",
+        "target": "file-storage-service",
+        "label": "Stores content assets",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-api-gateway-to-file-storage",
+        "source": "backend-api-gateway",
+        "target": "file-storage-service",
+        "label": "Manages direct uploads",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-cdn-to-static-asset-storage",
+        "source": "content-delivery-network",
+        "target": "static-asset-storage",
+        "label": "Caches assets from",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-web-app-to-cdn-assets",
+        "source": "web-application",
+        "target": "content-delivery-network",
+        "label": "Fetches static assets from",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-mobile-app-to-cdn-assets",
+        "source": "mobile-application",
+        "target": "content-delivery-network",
+        "label": "Fetches static content from",
+        "type": "data-flow"
+      },
+      {
+        "id": "e-mobile-application-to-cdn-api",
+        "source": "mobile-application",
+        "target": "content-delivery-network",
+        "label": "Makes API calls via",
+        "type": "communication"
+      },
+      {
+        "id": "e-web-application-to-cdn-api",
+        "source": "web-application",
+        "target": "content-delivery-network",
+        "label": "Makes API calls via",
+        "type": "communication"
+      },
+      {
+        "id": "e-cdn-to-api-gateway",
+        "source": "content-delivery-network",
+        "target": "backend-api-gateway",
+        "label": "Routes API requests to",
+        "type": "data-flow"
+      }
+    ]
+  },
+  "matchData": {
+    "matches": [
+      {
+        "componentId": "mobile-application",
+        "status": "gap",
+        "listings": []
+      },
+      {
+        "componentId": "backend-api-gateway",
+        "status": "partial",
+        "listings": [
+          {
+            "id": "a20cd1500b68acea9b79d48f",
+            "slug": "self-hosted-delta-sharing-platform",
+            "title": "Self-Hosted Delta Sharing Platform",
+            "short_description": "Self-hosted Delta Sharing platform with React/Express admin UI, multi-cloud storage, audit logs, and secure SSO/password authentication.",
+            "price": 9900,
+            "tags": [
+              "Express",
+              "React",
+              "Prisma",
+              "Docker",
+              "TypeScript"
+            ],
+            "category": "Dashboard",
+            "pack_completeness": 91,
+            "purchase_count": 0
+          }
+        ]
+      },
+      {
+        "componentId": "authentication-service",
+        "status": "gap",
+        "listings": []
+      },
+      {
+        "componentId": "diagnostic-engine-service",
+        "status": "gap",
+        "listings": []
+      },
+      {
+        "componentId": "user-database",
+        "status": "gap",
+        "listings": []
+      },
+      {
+        "componentId": "content-database",
+        "status": "gap",
+        "listings": []
+      },
+      {
+        "componentId": "content-management-system",
+        "status": "partial",
+        "listings": [
+          {
+            "id": "a20cd1500b68acea9b79d48f",
+            "slug": "self-hosted-delta-sharing-platform",
+            "title": "Self-Hosted Delta Sharing Platform",
+            "short_description": "Self-hosted Delta Sharing platform with React/Express admin UI, multi-cloud storage, audit logs, and secure SSO/password authentication.",
+            "price": 9900,
+            "tags": [
+              "Express",
+              "React",
+              "Prisma",
+              "Docker",
+              "TypeScript"
+            ],
+            "category": "Dashboard",
+            "pack_completeness": 91,
+            "purchase_count": 0
+          }
+        ]
+      },
+      {
+        "componentId": "web-application",
+        "status": "partial",
+        "listings": [
+          {
+            "id": "a20cd1500b68acea9b79d48f",
+            "slug": "self-hosted-delta-sharing-platform",
+            "title": "Self-Hosted Delta Sharing Platform",
+            "short_description": "Self-hosted Delta Sharing platform with React/Express admin UI, multi-cloud storage, audit logs, and secure SSO/password authentication.",
+            "price": 9900,
+            "tags": [
+              "Express",
+              "React",
+              "Prisma",
+              "Docker",
+              "TypeScript"
+            ],
+            "category": "Dashboard",
+            "pack_completeness": 91,
+            "purchase_count": 0
+          }
+        ]
+      },
+      {
+        "componentId": "analytics-service",
+        "status": "gap",
+        "listings": []
+      },
+      {
+        "componentId": "notification-service",
+        "status": "gap",
+        "listings": []
+      },
+      {
+        "componentId": "payment-processing-service",
+        "status": "gap",
+        "listings": []
+      },
+      {
+        "componentId": "file-storage-service",
+        "status": "partial",
+        "listings": [
+          {
+            "id": "a20cd1500b68acea9b79d48f",
+            "slug": "self-hosted-delta-sharing-platform",
+            "title": "Self-Hosted Delta Sharing Platform",
+            "short_description": "Self-hosted Delta Sharing platform with React/Express admin UI, multi-cloud storage, audit logs, and secure SSO/password authentication.",
+            "price": 9900,
+            "tags": [
+              "Express",
+              "React",
+              "Prisma",
+              "Docker",
+              "TypeScript"
+            ],
+            "category": "Dashboard",
+            "pack_completeness": 91,
+            "purchase_count": 0
+          }
+        ]
+      },
+      {
+        "componentId": "static-asset-storage",
+        "status": "partial",
+        "listings": [
+          {
+            "id": "a20cd1500b68acea9b79d48f",
+            "slug": "self-hosted-delta-sharing-platform",
+            "title": "Self-Hosted Delta Sharing Platform",
+            "short_description": "Self-hosted Delta Sharing platform with React/Express admin UI, multi-cloud storage, audit logs, and secure SSO/password authentication.",
+            "price": 9900,
+            "tags": [
+              "Express",
+              "React",
+              "Prisma",
+              "Docker",
+              "TypeScript"
+            ],
+            "category": "Dashboard",
+            "pack_completeness": 91,
+            "purchase_count": 0
+          }
+        ]
+      },
+      {
+        "componentId": "content-delivery-network",
+        "status": "partial",
+        "listings": [
+          {
+            "id": "a20cd1500b68acea9b79d48f",
+            "slug": "self-hosted-delta-sharing-platform",
+            "title": "Self-Hosted Delta Sharing Platform",
+            "short_description": "Self-hosted Delta Sharing platform with React/Express admin UI, multi-cloud storage, audit logs, and secure SSO/password authentication.",
+            "price": 9900,
+            "tags": [
+              "Express",
+              "React",
+              "Prisma",
+              "Docker",
+              "TypeScript"
+            ],
+            "category": "Dashboard",
+            "pack_completeness": 91,
+            "purchase_count": 0
+          }
+        ]
+      }
+    ],
+    "recommended": [
+      {
+        "listing": {
+          "id": "a20cd1500b68acea9b79d48f",
+          "slug": "self-hosted-delta-sharing-platform",
+          "title": "Self-Hosted Delta Sharing Platform",
+          "short_description": "Self-hosted Delta Sharing platform with React/Express admin UI, multi-cloud storage, audit logs, and secure SSO/password authentication.",
+          "price": 9900,
+          "tags": [
+            "Express",
+            "React",
+            "Prisma",
+            "Docker",
+            "TypeScript"
+          ],
+          "category": "Dashboard",
+          "pack_completeness": 91,
+          "purchase_count": 0
+        },
+        "coversComponents": [
+          "backend-api-gateway",
+          "content-management-system",
+          "web-application",
+          "file-storage-service",
+          "static-asset-storage",
+          "content-delivery-network"
+        ]
+      }
+    ],
+    "coverage": {
+      "total": 14,
+      "covered": 0,
+      "partial": 6,
+      "gaps": 8,
+      "score": 21
+    }
+  }
+}
